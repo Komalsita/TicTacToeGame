@@ -12,7 +12,6 @@ class TicTacToe {
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board[i].length; j++) {
                 board[i][j] = ' ';
-                // REMOVED: System.out.println(board[i][j]); -> caused messy output
             }
         }
     }
@@ -101,8 +100,6 @@ class HumanPlayer extends Player {
         this.mark = mark;
     }
     void makeMove() {
-        // FIXED: Using a local scanner here works, but generally it's better
-        // to pass one Scanner around. For now, I kept it simple but correct.
         Scanner scan = new Scanner(System.in);
         int row;
         int col;
@@ -122,8 +119,6 @@ class AIPlayer extends Player{
         this.mark = mark;
     }
     void makeMove() {
-        // FIXED: Using a local scanner here works, but generally it's better
-        // to pass one Scanner around. For now, I kept it simple but correct.
         Scanner scan = new Scanner(System.in);
         int row;
         int col;
